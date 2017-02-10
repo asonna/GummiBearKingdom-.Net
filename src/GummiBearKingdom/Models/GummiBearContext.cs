@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace GummiBearKingdom.Models
 {
-    public class GummiBearContext: DbContext
+    public class GummiBearDbContext: DbContext
     {
-        public GummiBearContext()
+        public GummiBearDbContext()
         {
         }
 
-        public DbSet <Product> GummiBearContext.Products { get; set; }
+        public DbSet<Section> Sections { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ToDoListWithMigrations;integrated security=True");
         }
 
-        public GummiBearContext(DbContextOptions<GummiBearContext> options)
+        public GummiBearDbContext(DbContextOptions<GummiBearDbContext> options)
             : base(options)
         {
         }
