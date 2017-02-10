@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model GummiBearKingdom.Models.Product
+
+<html>
+<head>
+    <title>Gummi Bear Kingdom - Details</title>
+</head>
+<body>
+    <h2>Gummi Bear Kingdom - Details</h2>
+    <hr />
+    @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+    <p>@Html.ActionLink("Back to Product list", "Index")</p>
+</body>
+</html>
