@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using ToDoListWithMigrations.Models;
+using GummiBearKingdom.Models;
 
 
 namespace GummiBearKingdom
@@ -43,7 +43,7 @@ namespace GummiBearKingdom
             {
                 app.UseDeveloperExceptionPage();
             }
-
+        }
             ////2
             //app.UseMvc(routes =>
             //{
@@ -60,5 +60,5 @@ namespace GummiBearKingdom
                 await context.Response.WriteAsync("Hello World!");
             });
         }
-    }
+   } 
 }

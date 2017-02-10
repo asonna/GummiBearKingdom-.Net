@@ -13,7 +13,7 @@ namespace GummiBearKingdom.Models
         public string Name { get; set; }
         public int cost { get; set; }
         public string OriginCountry { get; set; }
-
+        //public virtual Product Product { get; set; }
 
     }
 }

@@ -8,11 +8,11 @@ namespace GummiBearKingdom.Models
 {
     public class GummiBearContext: DbContext
     {
-        public GummiBearDbContext()
+        public GummiBearContext()
         {
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet <Product> GummiBearContext.Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
