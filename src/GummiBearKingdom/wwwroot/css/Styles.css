@@ -1,0 +1,26 @@
+﻿html {
+        margin: 0;
+        padding: 0;
+    }
+    
+    header, footer, hgroup,
+    nav, section {
+       
+   }
+   
+   html {
+        background: #fff url(../Images/fish.jpg) no-repeat center center fixed;
+        background-size: cover;
+        color: maroon;
+        padding: 10em; 
+        padding-top: 10em;
+        /*display: contents;*/
+   }
+
+   body {
+       background-color: antiquewhite;
+       font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+       font-size: 1.95em;
+       border-radius:15px;
+       padding: 0;    
+   }

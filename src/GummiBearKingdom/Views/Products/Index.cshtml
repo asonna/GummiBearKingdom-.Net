@@ -6,7 +6,7 @@
 @model IEnumerable<GummiBearKingdom.Models.Product>
 
 
-<h2>@Html.DisplayNameFor(model => model.Name) Detail List</h2>
+<h1> Products List </h1>
 <hr />
 <table class="table">
     <tr>
@@ -20,7 +20,7 @@
             @Html.DisplayNameFor(model => model.Cost)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Section.Name)
+            @Html.DisplayNameFor(model =>model.Section)
         </th>
         <th></th>
     </tr>
@@ -29,16 +29,16 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => listProject.Name)
+                @Html.DisplayFor(modelProduct => listProject.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => listProject.OriginCountry)
+                @Html.DisplayFor(modelProduct => listProject.OriginCountry)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => listProject.Cost)
+                $@Html.DisplayFor(modelProduct => listProject.Cost)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => listProject.Section.Name)
+                @Html.DisplayFor(modelProduct => listProject.Section.Name)
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", new { id = listProject.ProductId })
@@ -47,6 +47,6 @@
     }
 </table>
 
-<p>@Html.ActionLink("Add new product", "Create")</p>
+<button class="btn btn-default">@Html.ActionLink("Add new product", "Create")</button>
 
 

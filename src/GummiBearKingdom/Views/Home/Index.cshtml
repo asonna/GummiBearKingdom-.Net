@@ -1,15 +1,39 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h1>Welcome to the Kingdom of Bear Gummis!</h1>
+<hr />
+<br /><br />
 
-<html>
-<head>
-    <title>Gummi Bear Kingdom</title>
-</head>
-<body>
-    <h2>Welcome to the Kingdom of Bear Gummis!</h2>
-</body>
-</html>
+
+@model IEnumerable<GummiBearKingdom.Models.Section>
+
+
+<h2>We will serve you the best of Gummi Bear by Section.</h2>
+    <h3>Please select the product section you would like to explore: </h3>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var listSection in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => listSection.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = listSection.SectionId })  |  
+                @Html.ActionLink("Delete", "Delete", new { id = listSection.SectionId })
+            </td>
+        </tr>
+    }
+</table>
+
+<button class="btn btn-default">@Html.ActionLink("Add new section", "Create")</button><br />
