@@ -5,7 +5,13 @@
 
 @model GummiBearKingdom.Models.Product
 
-<h2>Gummi Bear Kingdom - Details</h2>
+<h2>Are you sure you want to delete this?</h2>
 <hr />
 @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
-<p>@Html.ActionLink("Back to Product list", "Index")</p>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+@Html.ActionLink("Back to product list", "Index")
+
+
