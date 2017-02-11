@@ -10,10 +10,15 @@ namespace GummiBearKingdom.Models
     [Table("Sections")]
     public class Section
     {
+        public Section()
+        {
+            this.Products = new HashSet<Product>();
+        }
+
         [Key]
         public int SectionId { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Product> Product { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
     }
 }

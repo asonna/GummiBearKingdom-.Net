@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GummiBearKingdom.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -28,6 +29,7 @@ namespace GummiBearKingdom.Controllers
 
         public IActionResult Create()
         {
+            ViewBag.SectionId = new SelectList(db.Sections, "SectionId", "Name");
             return View();
         }
 
@@ -38,10 +40,12 @@ namespace GummiBearKingdom.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        
 
         public IActionResult Edit(int id)
         {
             var thisProduct = db.Products.FirstOrDefault(products => products.ProductId == id);
+            ViewBag.SectionId = new SelectList(db.Sections, "SectionId", "Name");
             return View(thisProduct);
         }
 
@@ -52,6 +56,7 @@ namespace GummiBearKingdom.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
 
         public IActionResult Delete(int id)
         {

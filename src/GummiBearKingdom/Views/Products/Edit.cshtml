@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Gummi Bear Kingdom";
+    ViewData["Title"] = "Product Update";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -16,6 +16,15 @@
     @Html.LabelFor(model => model.Name)
     @Html.EditorFor(model => model.Name)
 
-    <input type="submit" value="Save" />
+    @Html.LabelFor(model => model.OriginCountry)
+    @Html.EditorFor(model => model.OriginCountry)
+
+    @Html.LabelFor(model => model.Cost)
+    @Html.EditorFor(model => model.Cost)
+
+    @Html.LabelFor(model => model.SectionId)
+    @Html.DropDownList("SectionId")
+
+    <input type="submit" value="Save" class="btn btn-default"/>
 }
 <p>@Html.ActionLink("Back to product list", "Index")</p>

@@ -1,11 +1,18 @@
 ﻿@{
-    ViewData["Title"] = "Gummi Bear Kingdom";
+    ViewData["Title"] = "Product Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @model GummiBearKingdom.Models.Product
 
-<h2>Gummi Bear Kingdom - Details</h2>
+<h1>Product Details</h1>
 <hr />
-@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+<h2>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h2>
+<h3>@Html.DisplayNameFor(model => model.OriginCountry): @Html.DisplayFor(model => model.OriginCountry)</h3>
+<h3>@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)</h3>
+<p>@Html.DisplayNameFor(model => model.SectionId) : @Html.DisplayFor(model => model.SectionId)</p>
+
+@Html.ActionLink("Edit", "Edit", new { id = Model.ProductId })  |  @Html.ActionLink("Delete", "Delete", new { id = Model.ProductId })
+
+<p>@Html.ActionLink("Add new product", "Create")</p>
 <p>@Html.ActionLink("Back to Product list", "Index")</p>

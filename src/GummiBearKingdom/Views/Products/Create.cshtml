@@ -1,18 +1,30 @@
 ﻿@{
-    ViewData["Title"] = "Gummi Bear Kingdom";
+    ViewData["Title"] = "Product Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @model GummiBearKingdom.Models.Product
 
 
-<h2>Create</h2>
+<h1>Create</h1>
 <hr />
-<h4>Add a new product</h4>
+
+<h2>Add a new product</h2>
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
-    <input type="submit" value="Add new product" />
+
+    @Html.LabelFor(model => model.OriginCountry)
+    @Html.TextBoxFor(model => model.OriginCountry)
+
+    @Html.LabelFor(model => model.Cost)
+    @Html.TextBoxFor(model => model.Cost)
+
+    @Html.LabelFor(model => model.SectionId)
+    @Html.DropDownList("SectionId")
+
+    <input type="submit" value="Add new product" class="btn btn-default"/>
 }
+
 <p>@Html.ActionLink("Back to product list", "Index")</p>
