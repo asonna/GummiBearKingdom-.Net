@@ -10,9 +10,15 @@
 <h2>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h2>
 <h3>@Html.DisplayNameFor(model => model.OriginCountry): @Html.DisplayFor(model => model.OriginCountry)</h3>
 <h3>@Html.DisplayNameFor(model => model.Cost): $@Html.DisplayFor(model => model.Cost)</h3>
-<p>@Html.DisplayNameFor(model => model.SectionId) : @Html.DisplayFor(model => model.SectionId)</p>
+<p>@Html.DisplayNameFor(model => model.Section.Name) : @Html.DisplayFor(model => model.Section.Name)</p>
 
 @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId })  |  @Html.ActionLink("Delete", "Delete", new { id = Model.ProductId })
+<br /><br />
 
-<p>@Html.ActionLink("Add new product", "Create")</p>
-<p>@Html.ActionLink("Back to Product list", "Index")</p>
+<div class="col-xs-6">
+    <button class="btn btn-default">@Html.ActionLink("Add new product", "Create")</button><br />
+</div>
+<div class="col-xs-6">
+    <button class="btn btn-default">@Html.ActionLink("Back to Product list", "Index")</button><br />
+</div><br />
+<hr />

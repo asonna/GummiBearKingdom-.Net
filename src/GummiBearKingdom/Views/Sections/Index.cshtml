@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Gummi Bear Available Sections</h1>
+<hr />
+<br />
+
+
+@model IEnumerable<GummiBearKingdom.Models.Section>
+
+<h1>Please select the product section you would like to explore: </h1>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var listSection in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => listSection.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = listSection.SectionId })  |
+                @Html.ActionLink("Delete", "Delete", new { id = listSection.SectionId })
+            </td >
+        </tr>
+    }
+</table >
+
+<div class="col-xs-6">
+    <button class="btn btn-default">@Html.ActionLink("Add new section", "Create")</button><br />
+</div>
+<div class="col-xs-6">
+    <button class="btn btn-default">@Html.ActionLink("All Products List", "Index", "Products")</button>
+</div><br /><br />
+

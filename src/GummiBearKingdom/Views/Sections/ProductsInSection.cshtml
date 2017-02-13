@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model IEnumerable<GummiBearKingdom.Models.Section>
+
+<h1>Gummi Bear Products in @Html.DisplayNameFor(model => model.Name) Sections </h1>
+<hr />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (var listSection in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => listSection.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Produts in this section", "ProductInSection", "Sections", new { id = ViewBag.thisProduct.SectionId })
+            </td>
+        </tr>
+    }
+</table>
+
+    < div class="col-xs-6">
+    <button class="btn btn-default">@Html.ActionLink("Add new section", "Create")</button><br />
+    </div>
+    <div class="col-xs-6">
+        @*<button class="btn btn-default">, null)</button>*@
+    </div><br />

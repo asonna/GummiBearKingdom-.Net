@@ -1,10 +1,4 @@
-﻿html {
-        margin: 0;
-        padding: 0;
-    }
-    
-    header, footer, hgroup,
-    nav, section {
+﻿    header, footer, hgroup, nav, section {
        
    }
    
@@ -21,6 +15,13 @@
        background-color: antiquewhite;
        font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
        font-size: 1.95em;
-       border-radius:15px;
-       padding: 0;    
+       border-radius:15px; 
+   }
+
+   h1 {
+       text-decoration: double;
+   }
+
+   .world {
+       align-content: center;
    }

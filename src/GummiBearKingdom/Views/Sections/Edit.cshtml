@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Product Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model GummiBearKingdom.Models.Section
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this section: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.SectionId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    <input type="submit" value="Save" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Back to section list", "Index")</p>
+

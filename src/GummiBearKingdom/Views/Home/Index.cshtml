@@ -3,37 +3,30 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@model IEnumerable<GummiBearKingdom.Models.Section>
 <h1>Welcome to the Kingdom of Bear Gummis!</h1>
 <hr />
-<br /><br />
 
-
-@model IEnumerable<GummiBearKingdom.Models.Section>
-
-
-<h2>We will serve you the best of Gummi Bear by Section.</h2>
-    <h3>Please select the product section you would like to explore: </h3>
+<h2>We will serve you the best of Gummi Bear!!</h2>
 <hr />
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var listSection in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => listSection.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = listSection.SectionId })  |  
-                @Html.ActionLink("Delete", "Delete", new { id = listSection.SectionId })
-            </td>
-        </tr>
-    }
-</table>
+<div class="world">
+    <img src="../Images/world.jpg"/>
+</div>
+<hr />
 
-<button class="btn btn-default">@Html.ActionLink("Add new section", "Create")</button><br />
+<h3>Please click below to the product list or section list you would like to explore: </h3>
+
+<div class="col-xs-6">
+    <button class="btn btn-default">@Html.ActionLink("View all sections", "Index", "Sections")</button><br />
+</div>
+<div class="col-xs-6">
+    <button class="btn btn-default">@Html.ActionLink("View all products", "Index", "Products")</button><br />
+</div><br /><br />
+
+<hr /><h4>
+    <em>Thank you for visiting our site!!!</em>
+</h4>
+
+
+
