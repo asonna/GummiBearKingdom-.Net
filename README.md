@@ -35,7 +35,7 @@ You will need the following things properly installed on your computer.
 ## Installation / Running
 
 * `git clone <https://github.com/asonna/GummiBearKingdom-.Net>` this repository
-* Navigate to the project directory and run this command in PowerShell: dnx ef database update
+* Navigate to the project directory that contain the project.json file and run this command in PowerShell: dotnet ef database update
 * Open Visual Studio
 * Build/Run the Program
 * Open the microsoft SQL only if you want to see the tables
